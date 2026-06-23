@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-crypto-accounting",
-  "version": "1.0.0",
-  "description": "Crypto Accounting & Tax — Track on-chain transactions, calculate cost basis, generate crypto tax reports (Form 8949)",
+  "version": "1.0.1",
+  "description": "Crypto Accounting & Tax \u2014 Track on-chain transactions, calculate cost basis, generate crypto tax reports (Form 8949)",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,7 +9,10 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-crypto-accounting",
   "homepage": "https://cortexprism.io/marketplace/plugins/crypto-accounting",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "crypto_track_transactions",
@@ -21,10 +24,25 @@
       "description": "Calculate cost basis (FIFO/LIFO/HIFO)",
       "params": []
     },
-    { "name": "crypto_identify_taxable", "description": "Identify taxable events", "params": [] },
-    { "name": "crypto_generate_8949", "description": "Generate Form 8949 tax report", "params": [] }
+    {
+      "name": "crypto_identify_taxable",
+      "description": "Identify taxable events",
+      "params": []
+    },
+    {
+      "name": "crypto_generate_8949",
+      "description": "Generate Form 8949 tax report",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
